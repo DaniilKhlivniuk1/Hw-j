@@ -1,76 +1,75 @@
-const drink = prompt("Оберіть 'Кава', 'Чай', 'Сік'");
-console.log("Ваш вибір:", drink);
-
-const day = prompt("Оберіть день тижня");
-switch (day.toLowerCase()) {
+const choose = prompt("Оберіть 'Кава', 'Чай', 'Сік'");
+console.log("Ваш вибір:", choose);
+const week = prompt("Оберіть день тижня");
+switch (week.toLowerCase()) {
   case "понеділок":
   case "вівторок":
   case "середа":
   case "четвер":
   case "п'ятниця":
-    console.log(day, "робочий день");
+    console.log(week, "робочий день");
     break;
   case "субота":
   case "неділя":
-    console.log(day, "вихідний день");
+    console.log(week, "вихідний день");
     break;
   default:
-    console.log(day, "не день тижня");
+    console.log(week, "не день тижня");
 }
-
 const month = prompt("Виберіть місяць");
 switch (month.toLowerCase()) {
-  case "березень":
   case "квітень":
   case "травень":
+  case "березень":
+
     console.log(month, "це весна");
     break;
+  case "липень":
+  case "серпень":
   case "червень":
   case "липень":
   case "серпень":
     console.log(month, "це літо");
     break;
+  case "листопад":
   case "вересень":
   case "жовтень":
-  case "листопад":
     console.log(month, "це осень");
     break;
-  case "грудень":
   case "січень":
   case "лютий":
+  case "грудень":
     console.log(month, "це зима");
     break;
   default:
     console.log(month, "не місяць");
 }
-
-const month2 = prompt("Оберіть місяць");
+const day = prompt("Оберіть місяць");
 switch (month2.toLowerCase()) {
-  case "квітень":
-  case "червень":
   case "вересень":
   case "листопад":
-    console.log(month2, "30 днів");
+  case "квітень":
+  case "червень":
+    console.log(day, "30 днів");
     break;
+  case "жовтень":
+  case "грудень":
+  case "січень":
   case "березень":
   case "травень":
   case "липень":
   case "серпень":
-  case "жовтень":
-  case "грудень":
-  case "січень":
-    console.log(month2, "31 день");
+    console.log(day, "31 день");
     break;
   case "лютий":
-    console.log("В цьому році, ", month2, "має 29 днів");
+    console.log("В цьому році, ", day, "має 29 днів");
     break;
   default:
-    console.log(month2, "не місяць");
+    console.log(day, "не місяць");
 }
-
-const color = prompt("Оберіть колір (червоний, жовтий, зелений)");
+const light = prompt("Оберіть колір (червоний, жовтий, зелений)");
 let action;
-switch (color.toLowerCase()) {
+switch (light.toLowerCase()) {
   case "червоний":
     action = "стоп";
     break;
@@ -84,23 +83,22 @@ switch (color.toLowerCase()) {
         action = "Неправильний колір";
 }
 console.log(action);
-
-const number1 = Number.parseFloat(prompt("Виберіть перше число"));
-const number2 = Number.parseFloat(prompt("Виберіть друге число"));
+const number = Number.parseFloat(prompt("Виберіть перше число"));
+const numbers = Number.parseFloat(prompt("Виберіть друге число"));
 const operation = prompt("Виберіть дію (+, -, *, /)(ви можете поділили на 0)");
 let result;
 switch (operation) {
   case "+":
-    result = number1 + number2;
+    result = number + numbers;
     break;
   case "-":
-    result = number1 - number2;
+    result = number - numbers;
     break;
   case "/":
-    result = number1 / number2;
+    result = number / numbers;
     break;
     case "*":
-    result = number1 * number2;
+    result = number * numbers;
     break;
     default:
         result = "Некорректна дія";
